@@ -38,5 +38,13 @@ namespace CalculatorUnitTests
             int expected = 0;
             Assert.AreEqual(expected, result);
         }
+
+        [TestMethod]
+        public void SubtractNumbersTest()
+        {
+            Calculate calcObject = new Calculate();
+            int result = calcObject.Subtract(15, 3);
+            Assert.AreEqual(12, result);
+        }
     }
 }

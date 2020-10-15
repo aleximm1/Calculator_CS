@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Runtime.InteropServices;
 
 namespace Calculator_CS
 {
@@ -14,6 +15,10 @@ namespace Calculator_CS
     {
         public int Add(int a, int b)
         {
+            long longA = (long)a;
+            long longB = (long)b;
+            var sum = longA + longB;
+            if (sum > int.MaxValue) throw new ArgumentOutOfRangeException();
             return a + b;
         }
     }
