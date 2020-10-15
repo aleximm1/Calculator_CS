@@ -9,4 +9,9 @@ namespace Calculator_CS
             
         }
     }
+
+    public class Calculate
+    {
+
+    }
 }

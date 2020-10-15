@@ -9,7 +9,7 @@ namespace CalculatorUnitTests
         [TestMethod]
         public void CalculateConstructorTest()
         {
-            
+            Calculate calcObject = new Calculate();
         }
     }
 }
