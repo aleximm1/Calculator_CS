@@ -11,5 +11,13 @@ namespace CalculatorUnitTests
         {
             Calculate calcObject = new Calculate();
         }
+
+        [TestMethod]
+        public void AddNumbersTest()
+        {
+            Calculate calcObject = new Calculate();
+            int result = calcObject.Add(3, 4);
+            Assert.AreEqual(7, result);
+        }
     }
 }
