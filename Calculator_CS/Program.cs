@@ -33,7 +33,11 @@ namespace Calculator_CS
 
         public double Divide(double a, double b)
         {
-            throw new NotImplementedException();
+            if (b == 0)
+            {
+                throw new ArgumentOutOfRangeException();
+            }
+            return a / b;
         }
     }
 }
