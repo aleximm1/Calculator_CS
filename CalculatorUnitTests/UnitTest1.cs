@@ -79,6 +79,31 @@ namespace CalculatorUnitTests
             int expected = 0;
             Assert.AreEqual(expected, result);
         }
+
+        [TestMethod]
+        public void LoopingDivideNumbersTest()
+        {
+            Calculate calcObject = new Calculate();
+            for (double a = 1; a < 1000; a++)
+            {
+                for (double b = 1; b < 1000; b++)
+                {
+                    double expected = a / b;
+                    double actual = calcObject.Divide(a, b);
+                    Assert.AreEqual(expected, actual);
+                }
+            }
+        }
+
+        [TestMethod]
+        [ExpectedException(typeof(ArgumentOutOfRangeException))]
+        public void DivideByZeroTest()
+        {
+            Calculate calcObject = new Calculate();
+            double result = calcObject.Divide(100, 0);
+            double expected = 0;
+            Assert.AreEqual(expected, result);
+        }
     }
 }
 

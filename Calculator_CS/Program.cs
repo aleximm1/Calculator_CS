@@ -30,5 +30,10 @@ namespace Calculator_CS
             if (sum < int.MinValue) throw new ArgumentOutOfRangeException();
             return a - b;
         }
+
+        public double Divide(double a, double b)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
